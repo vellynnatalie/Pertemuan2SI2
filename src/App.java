@@ -7,6 +7,9 @@ public class App {
         System.out.println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
 
         hitungLuasKubus();
+        Lingkaran lingkaran = new Lingkaran();
+        lingkaran.r = 15;
+        lingkaran.tampilkanLuasLingkaran();
     }
 
     //hitung volume kubus => V = s^3
@@ -21,5 +24,8 @@ public class App {
         System.out.println("Volume kubus (s*s*s) = " + v + " cm^3");
 
     }
+
+    //Luas lingkaran => A = phi * r^2
+
 }
 
