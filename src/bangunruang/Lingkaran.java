@@ -1,3 +1,4 @@
+package bangunruang;
 public class Lingkaran {
     //atribut
     public final float PI = 22.0f/7;

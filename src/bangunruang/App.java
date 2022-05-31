@@ -1,3 +1,6 @@
+package bangunruang;
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) throws Exception {
         String pesan = "Selamat Datang di matakuliah Pemrograman Berorientasi Objek";
@@ -6,18 +9,25 @@ public class App {
         System.out.println(pesan + " Tahun " + tahun);
         System.out.println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
 
-        hitungLuasKubus();
+        //scanner inputanKeyboard
+        Scanner keyboard = new Scanner(System.in);
+        
+        int s = 0;
+        System.out.print("Masukkan panjang sisi kubus (cm) = ");
+        s = keyboard.nextInt();
+        hitungLuasKubus(s);
+
         Lingkaran lingkaran = new Lingkaran();
-        lingkaran.r = 15;
+        System.out.print("Masukkan jari-jari lingkaran (cm) = ");
+        lingkaran.r = keyboard.nextInt();
         lingkaran.tampilkanLuasLingkaran();
     }
 
     //hitung volume kubus => V = s^3
-    public static void hitungLuasKubus () {
-        int v = 0;
-        int s = 10; //dlm cm
-
-        v = s*s*s;
+    public static void hitungLuasKubus (int s) {
+        double v = 0.0;
+    
+        v = Math.pow(s,3);
 
         System.out.println("Menghitung Volume Kubus");
         System.out.println("Panjang sisi = " + s + " cm");
